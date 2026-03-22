@@ -1,5 +1,12 @@
 /* Backbone CSS for Resume Template 1 */
 
+/* Make all icons align nicely with your text */
+iconify-icon {
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: -2px;
+}
+
 /* Basic */
 
 #vue-smart-pages-preview {
