@@ -1,0 +1,25 @@
+name: Check Upstream PR Status
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs once a day at midnight
+  workflow_dispatch:      # Allows you to trigger it manually
+
+jobs:
+  check-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR Status
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Check if PR 186 in the upstream repo is merged
+          STATE=$(gh pr view 186 --repo actions/configure-pages --json state --template '{{.state}}')
+          if [ "$STATE" == "MERGED" ]; then
+            echo "PR 186 has been merged! Time to update the workflow."
+            echo "Do TODO in .github/workflows/jekyll-gh-pages.yml."
+
+            # Here you could send a Slack/Discord notification or even 
+            # trigger another workflow to auto-update your files.
+          else
+            echo "PR 186 is still $STATE."
+          fi
