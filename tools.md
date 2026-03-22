@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="./tools.css">
 ### Tool Activities Legend:
 
 | \# | Icon | Name | Outcomes | Description |
