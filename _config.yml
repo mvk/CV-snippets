@@ -1,2 +1,7 @@
 ---
 theme: jekyll-theme-minimal
+
+kramdown:
+  parse_block_html: true
+  # syntax_highlighter_opts:
+  #   disable: true
