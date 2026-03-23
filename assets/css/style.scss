@@ -1,0 +1,12 @@
+---
+---
+/* Source CSS for CV-snippets */
+@import "{{ site.theme }}";
+
+// Your custom palette
+$section-headings-color: #43912b;
+$body-text-color: #000;
+$link-color: #43912b;
+
+body { color: $body-text-color; }
+a { color: $link-color; }
