@@ -14,113 +14,80 @@
   </head>
   <body>
     <section class="main-content">
-      <h3 id="tool-usage-activities-legend">Tool Usage Activities Legend:</h3>
+      <h2 id="tool-usage-activities-legend">Tool Usage Activities Legend</h2>
 
 <p>Explains what the actual usage was</p>
 
-<table>
+<table class="responsive-matrix">
   <thead>
     <tr>
-      <th style="text-align: left">#</th>
-      <th style="text-align: left">Icon</th>
-      <th style="text-align: left">Name</th>
-      <th style="text-align: left">Outcomes</th>
-      <th style="text-align: left">Description</th>
+      <th>#</th>
+      <th>Title</th>
+      <th>Output</th>
+      <th>Activities</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">1.</td>
-      <td style="text-align: left"><iconify-icon icon="mdi:flask-outline"></iconify-icon></td>
-      <td style="text-align: left">Try</td>
-      <td style="text-align: left">Hypothesis true/false, experience</td>
-      <td style="text-align: left">PoC, walk the walk</td>
+      <td>1.</td>
+      <td>Try<br /><iconify-icon icon="mdi:flask-outline"></iconify-icon></td>
+      <td>Hypothesis true/false, experience</td>
+      <td>PoC, walk the walk</td>
     </tr>
     <tr>
-      <td style="text-align: left">2.</td>
-      <td style="text-align: left"><iconify-icon icon="mdi:drawing"></iconify-icon></td>
-      <td style="text-align: left">Arch</td>
-      <td style="text-align: left">Docs: REQ, HLD, FDD; backlog</td>
-      <td style="text-align: left">Bureaucratics</td>
+      <td>2.</td>
+      <td>Arch<br /><iconify-icon icon="mdi:drawing"></iconify-icon></td>
+      <td>Docs: REQ, HLD, FDD, Backlog</td>
+      <td>Collecting the info and writing</td>
     </tr>
     <tr>
-      <td style="text-align: left">3.</td>
-      <td style="text-align: left"><iconify-icon icon="mdi:code-braces"></iconify-icon></td>
-      <td style="text-align: left">Code</td>
-      <td style="text-align: left">Artifacts/processes/services</td>
-      <td style="text-align: left">code, test, coordintate, deploy, post-deploy, maintain, resolve bugs</td>
+      <td>3.</td>
+      <td>Code<br /><iconify-icon icon="mdi:code-braces"></iconify-icon></td>
+      <td>Artifacts/processes/services</td>
+      <td>code, test, coordintate, deploy, post-deploy, maintain, resolve bugs</td>
     </tr>
     <tr>
-      <td style="text-align: left">4.</td>
-      <td style="text-align: left"><iconify-icon icon="lucide:gauge-circle"></iconify-icon></td>
-      <td style="text-align: left">Tune</td>
-      <td style="text-align: left">SLI-&gt;SLO, KB Updates</td>
-      <td style="text-align: left">Using SLI/SLO semantics improve SLIs and document the changes in KBs</td>
+      <td>4.</td>
+      <td>Tune<br /><iconify-icon icon="lucide:gauge-circle"></iconify-icon></td>
+      <td>Improved SLI that affect SLO, capture the process into the KB</td>
+      <td>Find the right SLI-&gt;SLO, Update KB</td>
     </tr>
     <tr>
-      <td style="text-align: left">5.</td>
-      <td style="text-align: left"><iconify-icon icon="mdi:api"></iconify-icon></td>
-      <td style="text-align: left">Int</td>
-      <td style="text-align: left">Integrate components</td>
-      <td style="text-align: left">utilize APIs, provide least access on the way</td>
+      <td>5.</td>
+      <td>Int<br /><iconify-icon icon="mdi:api"></iconify-icon></td>
+      <td>Added integrations</td>
+      <td>Utilize APIs, provide least access on the way |
+    &lt;/tr&gt;
+    <tr>
+      <td>6.</td>
+      <td>Ext<br /><iconify-icon icon="mdi:puzzle-outline"></iconify-icon></td>
+      <td>NEW modules/plugins/APIs/Services as artifacts</td>
+      <td>Extend with new artifacts deployed/available</td>
     </tr>
     <tr>
-      <td style="text-align: left">6.</td>
-      <td style="text-align: left"><iconify-icon icon="mdi:puzzle-outline"></iconify-icon></td>
-      <td style="text-align: left">Ext</td>
-      <td style="text-align: left">Extend with new artifacts deployed/available</td>
-      <td style="text-align: left">add new modules/plugins/APIs/Services as artifacts</td>
+      <td>7.</td>
+      <td>Migrate<br /><iconify-icon icon="tabler:arrows-right-left"></iconify-icon></td>
+      <td>Services are on a target system</td>
+      <td>System/Service Migrations</td>
     </tr>
-    <tr>
-      <td style="text-align: left">7.</td>
-      <td style="text-align: left"><iconify-icon icon="tabler:arrows-right-left"></iconify-icon></td>
-      <td style="text-align: left">Migrate</td>
-      <td style="text-align: left">Services on a target system</td>
-      <td style="text-align: left">System/Service Migrations</td>
-    </tr>
-  </tbody>
-</table>
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-<h4 id="for-example">For Example:</h4>
+### For Example
 
-<ol>
-  <li>if I only did “Try” it means I created the use of the tool, but it either did not meet the requirements or disproved the hypothesis.</li>
-</ol>
+1. if I only did "Try" it means I created the use of the tool, but it either did not meet the requirements or disproved the hypothesis.
 
-<h3 id="abbreviations">Abbreviations:</h3>
+## Abbreviations Legend
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Acronym</th>
-      <th style="text-align: left">Meaning</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">CM</td>
-      <td style="text-align: left">Configuration Management System</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">CR</td>
-      <td style="text-align: left">Code Review</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">OS</td>
-      <td style="text-align: left">Operating System</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">VCS</td>
-      <td style="text-align: left">Version Control System</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">VE</td>
-      <td style="text-align: left">Virtualization Engine</td>
-    </tr>
-  </tbody>
-</table>
+| Acronym | Meaning                         |
+|:--------|:--------------------------------|
+| CM      | Configuration Management System |
+| CR      | Code Review                     |
+| OS      | Operating System                |
+| VCS     | Version Control System          |
+| VE      | Virtualization Engine           |
 
-<h3 id="tools-table-responsive">Tools Table (responsive)</h3>
+## Tools Table
 
 <table class="responsive-matrix">
   <thead>
@@ -1304,6 +1271,7 @@
     </tr>
   </tbody>
 </table>
+</td></tr></tbody></table>
 
     </section>
   </body>
