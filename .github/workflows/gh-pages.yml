@@ -57,8 +57,6 @@ jobs:
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ${{ env.BUILD_DIR }}
-          preview-url-prefix: "preview/pr-${{ github.event.number }}"
-          # This must match the 'destination_dir' in peaceiris
           umbrella-dir: preview
 
   pr-preview-cleanup:
