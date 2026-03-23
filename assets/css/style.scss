@@ -3,10 +3,44 @@
 /* Source CSS for CV-snippets */
 @import "{{ site.theme }}";
 
-// Your custom palette
+// --- 1. COLOR OVERRIDES ---
+// Minimal theme uses these specific variables. 
+// Change these hex codes to whatever you like.
 $section-headings-color: #43912b;
 $body-text-color: #000;
 $link-color: #43912b;
 
-body { color: $body-text-color; }
-a { color: $link-color; }
+body { 
+  color: $body-text-color !important; 
+  background-color: #ffffff !important; 
+}
+
+h1, h2, h3, h4 { 
+  color: $section-headings-color !important; 
+}
+
+a { 
+  color: $link-color !important; 
+}
+// Your custom palette
+
+
+// 1. Kill the sidebar width
+header {
+  display: none; // Completely removes the left box from the layout
+}
+
+// 2. Expand the content to fill the screen
+section {
+  width: 100% !important;
+  max-width: 90% !important; // Gives some breathing room at the edges
+  margin: 0 auto !important; // Centers the content
+  float: none !important;    // Removes the 'float: right' usually found in Minimal
+}
+
+// 3. Let the wrapper use more space
+.wrapper {
+  max-width: 1200px !important; // Increase this if you want an ultra-wide table
+  margin: 0 auto;
+}
+
