@@ -1,0 +1,101 @@
+name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  # Manual trigger
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  pages: write
+  id-token: write
+
+
+# TODO: remove this env after the PR in the actions is merged
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  BUILD_DIR: ./build
+  DEST_DIR: ./_site
+
+concurrency:
+  # Use different groups for PRs vs Main to allow them to run in parallel
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  # 1. PR-Preview Job: Only runs on PRs
+  pr-preview-deploy:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Build site with PR baseurl
+        run: |
+          JEKYLL_ENV=production bundle exec jekyll build --verbose --destination="${BUILD_DIR}" --baseurl="/${{ github.event.repository.name }}/preview/pr-${{ github.event.number }}"
+
+      - name: Deploy PR preview
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ${{ env.BUILD_DIR }}
+          destination_dir: preview/pr-${{ github.event.number }}
+          keep_files: false
+  pr-preview-cleanup:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+      - name: Remove PR preview
+        run: rm -rf preview/pr-${{ github.event.number }}
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A
+          git commit -m "Remove preview for PR #${{ github.event.number }}" || true
+          git push
+  # 2. Build job: Runs on both (to catch errors in PRs)
+  build:
+    runs-on: ubuntu-latest
+    # We only run this if it's NOT a PR, OR we want to verify the build in a PR
+    # But since pr-preview already builds, we can skip this on PRs to save minutes.
+    if: github.event_name == 'push'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  # 3. Deployment job: ONLY runs on main branch pushes
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

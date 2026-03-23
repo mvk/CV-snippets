@@ -1,6 +1,8 @@
 ---
 theme: jekyll-theme-minimal
 
+baseurl: "/CV-snippets"
+
 kramdown:
   parse_block_html: true
   # syntax_highlighter_opts:
