@@ -45,13 +45,20 @@ jobs:
         run: |
           JEKYLL_ENV=production bundle exec jekyll build --verbose --destination="${BUILD_DIR}" --baseurl="/${{ github.event.repository.name }}/preview/pr-${{ github.event.number }}"
 
-      - name: Deploy PR preview
+      - name: Deploy PR under preview
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ${{ env.BUILD_DIR }}
           destination_dir: preview/pr-${{ github.event.number }}
           keep_files: false
+
+      - name: Update PR Preview Comment
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ${{ env.BUILD_DIR }}
+          umbrella-dir: preview
+
   pr-preview-cleanup:
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
