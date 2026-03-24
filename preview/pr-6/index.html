@@ -14,7 +14,71 @@
   </head>
   <body>
     <section class="main-content">
-      <h2 id="tool-usage-activities-legend">Tool Usage Activities Legend</h2>
+      <h2 id="abbreviationslegend-for-hr">Abbreviations/Legend {for HR}</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Acronym</th>
+      <th style="text-align: left">Meaning</th>
+      <th style="text-align: left">Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">SCM</td>
+      <td style="text-align: left">Software Configuration Management</td>
+      <td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Software_configuration_management">SCM</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">CR</td>
+      <td style="text-align: left">Code Review</td>
+      <td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Code_review">CR</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">KB</td>
+      <td style="text-align: left">Knowledge Base (wiki/docs)</td>
+      <td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Knowledge_base">KB</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">OS</td>
+      <td style="text-align: left">Operating System</td>
+      <td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Operating_system">OS</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">VCS</td>
+      <td style="text-align: left">Version Control System</td>
+      <td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Version_control">VCS</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">HV</td>
+      <td style="text-align: left">HyperVisor Engine</td>
+      <td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Hypervisor">HV</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PoC</td>
+      <td style="text-align: left">Proof of Concept</td>
+      <td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Proof_of_concept">PoC</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">REQ</td>
+      <td style="text-align: left">Requirements (documents)</td>
+      <td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Product_requirements_document">PRD</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">SLI</td>
+      <td style="text-align: left">Service Level Indicator (metric)</td>
+      <td style="text-align: left"><a href="https://sre.google/sre-book/service-level-objectives/">SRE</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">SLI</td>
+      <td style="text-align: left">Service Level Objective (metric)</td>
+      <td style="text-align: left"><a href="https://sre.google/sre-book/service-level-objectives/">SRE</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="tool-usage-activities-legend">Tool Usage Activities Legend</h2>
 
 <p>Explains what the actual usage was</p>
 
@@ -37,7 +101,7 @@
     <tr>
       <td>2.</td>
       <td>Arch<br /><iconify-icon icon="mdi:drawing"></iconify-icon></td>
-      <td>Docs: REQ, HLD, FDD, Backlog</td>
+      <td>Documents, Backlog</td>
       <td>Collecting the info and writing</td>
     </tr>
     <tr>
@@ -49,14 +113,14 @@
     <tr>
       <td>4.</td>
       <td>Tune<br /><iconify-icon icon="lucide:gauge-circle"></iconify-icon></td>
-      <td>Improved SLI that affect SLO, capture the process into the KB</td>
-      <td>Find the right SLI-&gt;SLO, Update KB</td>
+      <td>Updated SLOs, change in KB</td>
+      <td>Identify SLI&rarr;SLO, Update KB</td>
     </tr>
     <tr>
       <td>5.</td>
       <td>Int<br /><iconify-icon icon="mdi:api"></iconify-icon></td>
       <td>Added integrations</td>
-      <td>Utilize APIs, provide least access on the way |
+      <td>Utilize APIs, provide least access on the way
     &lt;/tr&gt;
     <tr>
       <td>6.</td>
@@ -67,35 +131,29 @@
     <tr>
       <td>7.</td>
       <td>Migrate<br /><iconify-icon icon="tabler:arrows-right-left"></iconify-icon></td>
-      <td>Services are on a target system</td>
-      <td>System/Service Migrations</td>
+      <td>Systems/Services on target system</td>
+      <td>Systems/Services Migrations</td>
     </tr>
   &lt;/tbody&gt;
 &lt;/table&gt;
 
 ### For Example
 
-1. if I only did "Try" it means I created the use of the tool, but it either did not meet the requirements or disproved the hypothesis.
-
-## Abbreviations Legend
-
-| Acronym | Meaning                         |
-|:--------|:--------------------------------|
-| CM      | Configuration Management System |
-| CR      | Code Review                     |
-| OS      | Operating System                |
-| VCS     | Version Control System          |
-| VE      | Virtualization Engine           |
+"Try" active means, the tech/tool was:
+- installed and run
+- quick/basic integration/automation was created
+- some notes/data was added to the KB
+- hypothesis was proven or not
 
 ## Tools Table
 
 <table class="responsive-matrix">
   <thead>
     <tr>
-      <th>Area</th>
-      <th>Category</th>
-      <th>Tool</th>
-      <th>Versions</th>
+      <th title="Area of skill">Area</th>
+      <th title="Skill category">Category</th>
+      <th title="Tool name">Tool</th>
+      <th title="Used versions">Versions</th>
       <th class="icon-col" title="Experiment, PoC, Walk the Walk">Try<br /><iconify-icon icon="mdi:flask-outline" class="active"></iconify-icon></th>
       <th class="icon-col" title="Design, Plan, Assess, Approve">Arch<br /><iconify-icon icon="mdi:drawing" class="active"></iconify-icon></th>
       <th class="icon-col" title="Implement, Test, Deploy, Maintain">Code<br /><iconify-icon icon="mdi:code-braces" class="active"></iconify-icon></th>
@@ -111,7 +169,7 @@
       <td data-label="Area">Infra</td>
       <td data-label="Category">Cloud</td>
       <td data-label="Tool"><iconify-icon icon="logos:aws"></iconify-icon> AWS</td>
-      <td data-label="Versions"></td>
+      <td data-label="Versions"><code>2012+</code></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
       <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
       <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
@@ -125,7 +183,7 @@
       <td data-label="Area">Infra</td>
       <td data-label="Category">Cloud</td>
       <td data-label="Tool"><iconify-icon icon="logos:google-cloud"></iconify-icon> GCP</td>
-      <td data-label="Versions"></td>
+      <td data-label="Versions"><code>2017+</code></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
       <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
       <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
@@ -222,8 +280,8 @@
     <tr>
       <td data-label="Area">Infra</td>
       <td data-label="Category">OS</td>
-      <td data-label="Tool"><iconify-icon icon="simple-icons:suse"></iconify-icon> SUSE</td>
-      <td data-label="Versions">SLES: <code>11.x</code>, <code>13.x</code></td>
+      <td data-label="Tool"><iconify-icon icon="simple-icons:suse"></iconify-icon> SLES</td>
+      <td data-label="Versions"><code>11.x,13.x</code></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
       <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
       <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
@@ -237,7 +295,7 @@
       <td data-label="Area">Infra</td>
       <td data-label="Category">OS</td>
       <td data-label="Tool"><iconify-icon icon="logos:debian"></iconify-icon> Debian</td>
-      <td data-label="Versions"><code>2.2 - 13.x</code></td>
+      <td data-label="Versions"><code>2.2-13.x</code></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
       <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
       <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
@@ -265,7 +323,7 @@
       <td data-label="Area">Infra</td>
       <td data-label="Category">OS</td>
       <td data-label="Tool"><iconify-icon icon="logos:freebsd"></iconify-icon> FreeBSD</td>
-      <td data-label="Versions"><code>4.0</code>-<code>6.0</code></td>
+      <td data-label="Versions"><code>4.0-6.0</code></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
       <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
       <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
@@ -277,9 +335,9 @@
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
-      <td data-label="Category">VE</td>
+      <td data-label="Category">HV</td>
       <td data-label="Tool">oVirt</td>
-      <td data-label="Versions"><code>3.6</code> - <code>4.0</code></td>
+      <td data-label="Versions"><code>3.6-4.0</code></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
       <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
       <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
@@ -291,9 +349,9 @@
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
-      <td data-label="Category">VE</td>
+      <td data-label="Category">HV</td>
       <td data-label="Tool">RHEV</td>
-      <td data-label="Versions"><code>3.6</code> - <code>3.9</code></td>
+      <td data-label="Versions"><code>3.6-3.9</code></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
       <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
       <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
@@ -305,7 +363,7 @@
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
-      <td data-label="Category">VE</td>
+      <td data-label="Category">HV</td>
       <td data-label="Tool">VMWare ESXi</td>
       <td data-label="Versions"><code>4.1</code> - <code>6.0</code></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
@@ -319,7 +377,7 @@
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
-      <td data-label="Category">VE</td>
+      <td data-label="Category">HV</td>
       <td data-label="Tool">ProxMox</td>
       <td data-label="Versions"><code>4.2</code></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
@@ -333,7 +391,7 @@
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
-      <td data-label="Category">VE</td>
+      <td data-label="Category">HV</td>
       <td data-label="Tool">OpenStack</td>
       <td data-label="Versions"><code>Kilo</code></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
@@ -405,7 +463,7 @@
       <td data-label="Area">Infra</td>
       <td data-label="Category">Deployment</td>
       <td data-label="Tool">Fabric</td>
-      <td data-label="Versions"></td>
+      <td data-label="Versions"><code>1.3.8-1.11.3</code></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
       <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
       <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
@@ -419,19 +477,19 @@
       <td data-label="Area">Infra</td>
       <td data-label="Category">Deployment</td>
       <td data-label="Tool">Plumbum</td>
-      <td data-label="Versions"></td>
+      <td data-label="Versions"><code>0.9.0-1.4.0</code></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
       <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
       <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
-      <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
-      <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
-      <td data-label="Ext"><iconify-icon icon="mdi:check" title="Ext"></iconify-icon></td>
-      <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:minus" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:minus" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
       <td data-label="Comments">shell-like python automation</td>
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
-      <td data-label="Category">CM</td>
+      <td data-label="Category">SCM</td>
       <td data-label="Tool"><iconify-icon icon="simple-icons:puppet"></iconify-icon> Puppet</td>
       <td data-label="Versions"></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
@@ -445,7 +503,7 @@
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
-      <td data-label="Category">CM</td>
+      <td data-label="Category">SCM</td>
       <td data-label="Tool"><iconify-icon icon="simple-icons:chef"></iconify-icon> Chef</td>
       <td data-label="Versions"></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
@@ -459,7 +517,7 @@
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
-      <td data-label="Category">CM</td>
+      <td data-label="Category">SCM</td>
       <td data-label="Tool"><iconify-icon icon="mdi:cog-sync"></iconify-icon> CFEngine</td>
       <td data-label="Versions"></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
@@ -477,13 +535,13 @@
       <td data-label="Tool"><iconify-icon icon="mdi:sync-circle"></iconify-icon> SystemD</td>
       <td data-label="Versions"></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
-      <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:minus" title="Arch"></iconify-icon></td>
       <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
       <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:check" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments"></td>
+      <td data-label="Comments">did: <code>.timer,.unit,.socket,.path</code></td>
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
@@ -491,7 +549,7 @@
       <td data-label="Tool"><iconify-icon icon="mdi:script-text-outline"></iconify-icon> Sys V</td>
       <td data-label="Versions"></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
-      <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:minus" title="Arch"></iconify-icon></td>
       <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
       <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
@@ -697,8 +755,8 @@
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
-      <td data-label="Category">Provisioning</td>
-      <td data-label="Tool"><iconify-icon icon="fa6-solid:f"></iconify-icon> Foreman</td>
+      <td data-label="Category">Packaging</td>
+      <td data-label="Tool"><iconify-icon icon="vscode-icons:file-type-debian"></iconify-icon> deb</td>
       <td data-label="Versions"></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
       <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
@@ -707,7 +765,77 @@
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:check" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments">Infra Management, uses puppet/ansible/pxe upstream for Satellite, content using Katello</td>
+      <td data-label="Comments">Packaged services/binaries/configuration</td>
+    </tr>
+    <tr>
+      <td data-label="Area">Infra</td>
+      <td data-label="Category">Packaging</td>
+      <td data-label="Tool"><iconify-icon icon="vscode-icons:file-type-rpm"></iconify-icon> rpm</td>
+      <td data-label="Versions"></td>
+      <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:check" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments">Packaged services/binaries/configuration</td>
+    </tr>
+    <tr>
+      <td data-label="Area">Infra</td>
+      <td data-label="Category">Packaging</td>
+      <td data-label="Tool"><iconify-icon icon="vscode-icons:file-type-python"></iconify-icon> pypi</td>
+      <td data-label="Versions"></td>
+      <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:check" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments">Packaged utilities/configuration/data</td>
+    </tr>
+    <tr>
+      <td data-label="Area">Infra</td>
+      <td data-label="Category">Packaging</td>
+      <td data-label="Tool"><iconify-icon icon="vscode-icons:file-type-ruby"></iconify-icon> gem</td>
+      <td data-label="Versions"></td>
+      <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:check" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments">Packaged utilities/configuration/data</td>
+    </tr>
+    <tr>
+      <td data-label="Area">Infra</td>
+      <td data-label="Category">Packaging</td>
+      <td data-label="Tool"><iconify-icon icon="mdi:docker"></iconify-icon> docker image</td>
+      <td data-label="Versions"></td>
+      <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:check" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments">Packaged utilities/configuration/data/services/Ansible EE</td>
+    </tr>
+    <tr>
+      <td data-label="Area">Infra</td>
+      <td data-label="Category">Provisioning</td>
+      <td data-label="Tool"><iconify-icon icon="fa6-solid:f"></iconify-icon> Foreman</td>
+      <td data-label="Versions"><code>1.7.2-1.10.0</code></td>
+      <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:minus" title="Arch"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments"></td>
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
@@ -715,13 +843,13 @@
       <td data-label="Tool"><iconify-icon icon="mdi:satellite-variant"></iconify-icon> RH Satellite</td>
       <td data-label="Versions"></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
-      <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:minus" title="Arch"></iconify-icon></td>
       <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
       <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
-      <td data-label="Ext"><iconify-icon icon="mdi:check" title="Ext"></iconify-icon></td>
-      <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments">Infra Management, uses puppet/ansible/pxe upstream for Satellite (downstream Foreman)</td>
+      <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments">downstream Foreman</td>
     </tr>
     <tr>
       <td data-label="Area">Development</td>
@@ -729,12 +857,12 @@
       <td data-label="Tool"><iconify-icon icon="logos:gnu"></iconify-icon> GNU Make/Autotools</td>
       <td data-label="Versions"><code>2.x</code>-<code>4.x</code></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
-      <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:minus" title="Arch"></iconify-icon></td>
       <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
-      <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:minus" title="Tune"></iconify-icon></td>
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
-      <td data-label="Ext"><iconify-icon icon="mdi:check" title="Ext"></iconify-icon></td>
-      <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
       <td data-label="Comments"></td>
     </tr>
     <tr>
@@ -749,7 +877,7 @@
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:check" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments"></td>
+      <td data-label="Comments">packaged c/c++ projects</td>
     </tr>
     <tr>
       <td data-label="Area">Development</td>
@@ -777,7 +905,7 @@
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:check" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments"></td>
+      <td data-label="Comments">wrote <code>pom.xml</code></td>
     </tr>
     <tr>
       <td data-label="Area">Development</td>
@@ -786,12 +914,12 @@
       <td data-label="Versions"><code>2.0, 3.0</code></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
       <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
-      <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:minus" title="Code"></iconify-icon></td>
       <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
       <td data-label="Int"><iconify-icon icon="mdi:minus" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments"></td>
+      <td data-label="Comments">mainly edited <code>build.gradle</code></td>
     </tr>
     <tr>
       <td data-label="Area">Development</td>
