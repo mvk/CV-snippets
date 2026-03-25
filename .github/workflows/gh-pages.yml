@@ -67,7 +67,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # main as of 2026/03/25
+        uses: actions/deploy-pages@v5
 
   # 3. handle PR Previews
   # 3.1. PR-Preview Job: Only runs on PRs
