@@ -52,7 +52,8 @@ jobs:
           source: ./
           destination: ./_site
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v6
+        uses: mvk/upload-pages-artifact@bump_upload_artifact
+        # uses: actions/upload-pages-artifact@v6
 
   # 2. Deployment job: ONLY runs on main branch pushes
 
