@@ -73,6 +73,7 @@ jobs:
   # 3.1. PR-Preview Job: Only runs on PRs
   pr-preview-deploy:
     runs-on: ubuntu-latest
+    needs: setup
     if: github.event_name == 'pull_request'
     steps:
       - name: Checkout
@@ -88,7 +89,7 @@ jobs:
 
       - name: Build site with PR baseurl
         run: |
-          JEKYLL_ENV=production bundle exec jekyll build --verbose --destination="${BUILD_DIR}" --baseurl="/${{ github.event.repository.name }}/${PREVIEW_DIR}/pr-${{ github.event.number }}"
+          JEKYLL_ENV=production bundle exec jekyll build --verbose --destination="${BUILD_DIR}" --baseurl="/${{ github.event.repository.name }}/${{ needs.setup.outputs.preview_dir }}/pr-${{ github.event.number }}"
 
       - name: Deploy PR under preview
         uses: mvk/actions-gh-pages@patch-2
