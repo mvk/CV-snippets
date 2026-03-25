@@ -18,6 +18,7 @@ permissions:
 env:
   BUILD_DIR: ./build
   DEST_DIR: ./_site
+  PREVIEW_DIR: preview
 
 concurrency:
   # Use different groups for PRs vs Main to allow them to run in parallel
@@ -43,7 +44,7 @@ jobs:
 
       - name: Build site with PR baseurl
         run: |
-          JEKYLL_ENV=production bundle exec jekyll build --verbose --destination="${BUILD_DIR}" --baseurl="/${{ github.event.repository.name }}/preview/pr-${{ github.event.number }}"
+          JEKYLL_ENV=production bundle exec jekyll build --verbose --destination="${BUILD_DIR}" --baseurl="/${{ github.event.repository.name }}/${PREVIEW_DIR}/pr-${{ github.event.number }}"
 
       - name: Deploy PR under preview
         uses: mvk/actions-gh-pages@patch-2
@@ -52,7 +53,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ${{ env.BUILD_DIR }}
-          destination_dir: preview/pr-${{ github.event.number }}
+          destination_dir: ${{ env.PREVIEW_DIR }}/pr-${{ github.event.number }}
           keep_files: false
 
       - name: Update PR Preview Comment
@@ -60,43 +61,10 @@ jobs:
         # uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ${{ env.BUILD_DIR }}
-          umbrella-dir: preview
-
-  pr-preview-cleanup-closed:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          ref: gh-pages
-      - name: Remove PR preview
-        run: rm -rf preview/pr-${{ github.event.number }}
-      - name: Commit and push
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add -A
-          git commit -m "Remove preview for PR #${{ github.event.number }}. PR closed by @${{ github.event.sender.login }}." || true
-          git push
-
-  pr-preview-cleanup-merged:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && github.event.pull_request.merged == true
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          ref: gh-pages
-      - name: Remove PR preview
-        run: rm -rf preview/pr-${{ github.event.number }}
-      - name: Commit and push
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add -A
-          git commit -m "Remove preview for PR #${{ github.event.number }}. PR merged into ${{ github.event.pull_request.base.ref }} by @${{ github.event.sender.login}}" || true
-          git push
+          umbrella-dir: ${{ env.PREVIEW_DIR }}
 
   # 2. Build job: Runs on both (to catch errors in PRs)
+
   build:
     runs-on: ubuntu-latest
     # We only run this if it's NOT a PR, OR we want to verify the build in a PR
@@ -127,3 +95,17 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # main as of 2026/03/25
+
+  # 3. handle PR Previews
+
+  pr-preview-cleanup-closed:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == false
+    uses: ./.github/workflows/pr-preview-cleanup.yml
+    with:
+      preview_dir: ${{ env.PREVIEW_DIR }}
+
+  pr-preview-cleanup-merged:
+    if: github.event_name == 'pull_request' && github.event.pull_request.merged == true
+    uses: ./.github/workflows/pr-preview-cleanup.yml
+    with:
+      preview_dir: ${{ env.PREVIEW_DIR }}

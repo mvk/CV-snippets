@@ -1,0 +1,41 @@
+---
+on:
+  workflow_call:
+    inputs:
+      preview_dir:
+        description: "The root directory for PR previews"
+        required: false
+        type: string
+        default: 'preview'
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: gh-pages
+
+      - name: Remove PR Preview
+        run: |
+          TARGET="${{ inputs.preview_dir }}/pr-${{ github.event.number }}"
+          rm -rf "${TARGET}"
+          if [ -d "${{ inputs.preview_dir }}" ] && [ -z "$(ls -A "${{ inputs.preview_dir }}" 2>/dev/null)" ]; then
+            rm -rf "${{ inputs.preview_dir }}"
+          fi
+
+      - name: Commit and push
+        run: |
+          # Construct message based on input
+          MSG="Remove preview for PR #${{ github.event.number }}."
+          # Directly accessing the global context inside the shell script
+          if [[ "${{ github.event.pull_request.merged }}" == "true" ]]; then
+            MSG="${MSG} PR merged by @${{ github.event.sender.login }} to ${{ github.event.pull_request.base.ref }}."
+          else
+            MSG="${MSG} PR closed by @${{ github.event.sender.login }}."
+          fi
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A
+          git commit -m "${MSG}" || true
+          git push
