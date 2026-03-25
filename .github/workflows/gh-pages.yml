@@ -18,7 +18,7 @@ permissions:
 env:
   BUILD_DIR: ./build
   DEST_DIR: ./_site
-  PREVIEW_DIR: preview
+  PREVIEW_DIR: 'preview'
 
 concurrency:
   # Use different groups for PRs vs Main to allow them to run in parallel
@@ -26,6 +26,13 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      preview_dir: ${{ env.PREVIEW_DIR }}
+    steps:
+      - run: echo "Setting up environment..."
   # 1. PR-Preview Job: Only runs on PRs
   pr-preview-deploy:
     runs-on: ubuntu-latest
@@ -99,13 +106,15 @@ jobs:
   # 3. handle PR Previews
 
   pr-preview-cleanup-closed:
+    needs: setup
     if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == false
     uses: ./.github/workflows/pr-preview-cleanup.yml
     with:
-      preview_dir: ${{ env.PREVIEW_DIR }}
+      preview_dir: ${{ needs.setup.outputs.preview_dir }}
 
   pr-preview-cleanup-merged:
+    needs: setup
     if: github.event_name == 'pull_request' && github.event.pull_request.merged == true
     uses: ./.github/workflows/pr-preview-cleanup.yml
     with:
-      preview_dir: ${{ env.PREVIEW_DIR }}
+      preview_dir: ${{ needs.setup.outputs.preview_dir }}
