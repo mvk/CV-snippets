@@ -11,15 +11,32 @@ jobs:
       - name: Check PR Status
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
         run: |
-          # Check if PR 186 in the upstream repo is merged
-          STATE=$(gh pr view 186 --repo actions/configure-pages --json state --template '{{.state}}')
-          if [ "$STATE" == "MERGED" ]; then
-            echo "PR 186 has been merged! Time to update the workflow."
-            echo "Do TODO in .github/workflows/jekyll-gh-pages.yml."
-
-            # Here you could send a Slack/Discord notification or even 
-            # trigger another workflow to auto-update your files.
-          else
-            echo "PR 186 is still $STATE."
+          declare -a PR_URLS
+          PR_URLS+=(
+            https://github.com/actions/configure-pages/pull/186
+            https://github.com/actions/deploy-pages/pull/409
+            https://github.com/peaceiris/actions-gh-pages/pull/1143
+            https://github.com/actions/upload-pages-artifact/pull/140
+          )
+          COUNT="${#PR_URLS[@]}"
+          for PR_URL in "${PR_URLS[@]}"; do
+            echo "Testing: ${PR_URL}"
+            REPO="${PR_URL//https:\/\/github.com\//}"
+            PR="${REPO##*/}"
+            REPO="${REPO%/*}"
+            REPO="${REPO%/*}"
+            STATE=$(gh pr view "${PR}" --repo "${REPO}" --json state --template '{{.state}}')
+            if [ "${STATE}" != "MERGED" ]; then
+              echo "PR ${PR} is still ${STATE}. no need to continue"
+              break
+            fi
+            COUNT=$((COUNT - 1))
+            echo "PR ${PR} state='${STATE}' (${COUNT} more are left to verify)."
+          done
+          if [[ "${COUNT}" -eq 0 ]]; then
+            echo "All the tracked PRs have been merged!"
+            echo "Time to update the workflow:"
+            echo -e "    => Do what TODO in .github/workflows/gh-pages.yml instructs."
           fi
