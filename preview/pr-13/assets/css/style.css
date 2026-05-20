@@ -588,6 +588,22 @@ footer {
   --snip-accent: #CA3832;
 }
 
+:root[data-theme=black] {
+  --snip-accent: #000000;
+}
+
+:root[data-theme=bluey] {
+  --snip-accent: #377BB5;
+}
+
+:root[data-theme=mango] {
+  --snip-accent: #EE8732;
+}
+
+:root[data-theme=deepurple] {
+  --snip-accent: #9C5BDE;
+}
+
 body {
   color: #000 !important;
   background-color: #ffffff !important;
