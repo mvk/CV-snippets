@@ -8,14 +8,18 @@
 // URL param ?use_theme=NAME selects a named theme.
 // URL param ?use_theme=%23HEX (the %23 is a URL-encoded "#") applies a raw color.
 $snip-themes: (
-  green:       #75b800,
-  ultramarine: #3C4EFE,
-  salmon: #CA3832,
+  "green":       #75b800,
+  "ultramarine": #3C4EFE,
+  "salmon":      #CA3832,
+  "black":       #000000,
+  "bluey":       #377BB5,
+  "mango":       #EE8732,
+  "deepurple":   #9C5BDE
 );
 
 // Default accent when no ?use_theme parameter is present
 :root {
-  --snip-accent: #{map-get($snip-themes, green)};
+  --snip-accent: #{map-get($snip-themes, "green")};
 }
 
 // One :root[data-theme="NAME"] block per map entry, generated at build time
