@@ -3,24 +3,42 @@
 /* Source CSS for CV-snippets */
 @import "{{ site.theme }}";
 
+// --- Theme mnemonics: name -> accent hex.
+// Add a new line here to create a new named theme.
+// URL param ?use_theme=NAME selects a named theme.
+// URL param ?use_theme=%23HEX (the %23 is a URL-encoded "#") applies a raw color.
+$snip-themes: (
+  green:       #75b800,
+  ultramarine: #3C4EFE,
+  salmon: #CA3832,
+);
+
+// Default accent when no ?use_theme parameter is present
+:root {
+  --snip-accent: #{map-get($snip-themes, green)};
+}
+
+// One :root[data-theme="NAME"] block per map entry, generated at build time
+@each $name, $color in $snip-themes {
+  :root[data-theme="#{$name}"] {
+    --snip-accent: #{$color};
+  }
+}
+
 // --- 1. COLOR OVERRIDES ---
-// Minimal theme uses these specific variables. 
-// Change these hex codes to whatever you like.
-$section-headings-color: #75b800; // nVidia Green
 $body-text-color: #000;
-$link-color: #75b800;             // nVidia Green
 
-body { 
-  color: $body-text-color !important; 
-  background-color: #ffffff !important; 
+body {
+  color: $body-text-color !important;
+  background-color: #ffffff !important;
 }
 
-h1, h2, h3, h4 { 
-  color: $section-headings-color !important; 
+h1, h2, h3, h4 {
+  color: var(--snip-accent) !important;
 }
 
-a { 
-  color: $link-color !important; 
+a {
+  color: var(--snip-accent) !important;
 }
 // Your custom palette
 
@@ -65,7 +83,7 @@ section {
   font-size: 20px;
 }
 
-.active { color: #75b800; } // nVidia Green
+.active { color: var(--snip-accent); }
 .inactive { color: #d1d5da; } // Faded gray
 
 
