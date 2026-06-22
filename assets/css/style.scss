@@ -1,5 +1,4 @@
----
----
+--- ---
 /* Source CSS for CV-snippets */
 @import "{{ site.theme }}";
 
@@ -8,13 +7,14 @@
 // URL param ?use_theme=NAME selects a named theme.
 // URL param ?use_theme=%23HEX (the %23 is a URL-encoded "#") applies a raw color.
 $snip-themes: (
-  "green":       #75b800,
+  "green": #75b800,
   "ultramarine": #3C4EFE,
-  "salmon":      #CA3832,
-  "black":       #000000,
-  "bluey":       #377BB5,
-  "mango":       #EE8732,
-  "deepurple":   #9C5BDE
+  "salmon": #CA3832,
+  "black": #000000,
+  "bluey": #377BB5,
+  "mango": #EE8732,
+  "ubuntu": #E95420,
+  "deepurple": #9C5BDE
 );
 
 // Default accent when no ?use_theme parameter is present
@@ -37,13 +37,17 @@ body {
   background-color: #ffffff !important;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--snip-accent) !important;
 }
 
 a {
   color: var(--snip-accent) !important;
 }
+
 // Your custom palette
 
 
@@ -57,7 +61,7 @@ section {
   width: 100% !important;
   max-width: 90% !important; // Gives some breathing room at the edges
   margin: 0 auto !important; // Centers the content
-  float: none !important;    // Removes the 'float: right' usually found in Minimal
+  float: none !important; // Removes the 'float: right' usually found in Minimal
 }
 
 // 3. Let the wrapper use more space
@@ -87,8 +91,15 @@ section {
   font-size: 20px;
 }
 
-.active { color: var(--snip-accent); }
-.inactive { color: #d1d5da; } // Faded gray
+.active {
+  color: var(--snip-accent);
+}
+
+.inactive {
+  color: #d1d5da;
+}
+
+// Faded gray
 
 
 /* --- Desktop View (Standard Table) --- */
@@ -121,7 +132,8 @@ section {
   /* Make every cell a full-width line */
   .responsive-matrix td {
     display: block;
-    text-align: right; /* Values on the right */
+    text-align: right;
+    /* Values on the right */
     border-bottom: 1px solid #eee;
     padding: 8px 0;
     position: relative;
@@ -129,7 +141,8 @@ section {
 
   /* Inject the Header name on the left of the cell */
   .responsive-matrix td::before {
-    content: attr(data-label); /* Pulls from the data-label HTML attribute */
+    content: attr(data-label);
+    /* Pulls from the data-label HTML attribute */
     float: left;
     font-weight: bold;
     color: #666;
