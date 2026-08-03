@@ -283,7 +283,7 @@ title: The tools I have used/been using
       <td data-label="Area">Infra</td>
       <td data-label="Category">OS</td>
       <td data-label="Tool"><iconify-icon icon="simple-icons:suse"></iconify-icon> SLES</td>
-      <td data-label="Versions"><code>11.x,13.x</code></td>
+      <td data-label="Versions"><code>9.x,11.x</code></td>
       <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
       <td data-label="Arch"><iconify-icon icon="mdi:check" title="Arch"></iconify-icon></td>
       <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
