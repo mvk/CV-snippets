@@ -8,16 +8,14 @@
 // URL param ?use_theme=NAME selects a named theme.
 // URL param ?use_theme=%23HEX (the %23 is a URL-encoded "#") applies a raw color.
 $snip-themes: (
-  // NVidia green
-  "green": #75b800,
-  "ultramarine": #3C4EFE,
-  "salmon": #CA3832,
   "black": #000000,
   "bluey": #377BB5,
+  "deepurple": #9C5BDE,
+  "nvidia": #75b800,
   "mango": #EE8732,
-  // Canonical orange
-  "ubuntu": #E95420,
-  "deepurple": #9C5BDE
+  "peax": #014122,
+  "salmon": #CA3832,
+  "ultramarine": #3C4EFE
 );
 
 // Default accent when no ?use_theme parameter is present
