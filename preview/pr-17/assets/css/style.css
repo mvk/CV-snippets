@@ -1,3 +1,4 @@
+/* Source CSS for CV-snippets */
 @font-face {
   font-family: "Noto Sans";
   font-weight: 400;
@@ -569,6 +570,159 @@ footer {
     padding: 0.4in;
     font-size: 12pt;
     color: #444;
+  }
+}
+:root {
+  --snip-accent: #75b800;
+}
+
+:root[data-theme=black] {
+  --snip-accent: #000000;
+}
+
+:root[data-theme=bluey] {
+  --snip-accent: #377BB5;
+}
+
+:root[data-theme=deepurple] {
+  --snip-accent: #9C5BDE;
+}
+
+:root[data-theme=green] {
+  --snip-accent: #75b800;
+}
+
+:root[data-theme=mango] {
+  --snip-accent: #EE8732;
+}
+
+:root[data-theme=optum] {
+  --snip-accent: #FF612B;
+}
+
+:root[data-theme=pagaya] {
+  --snip-accent: #2588FA;
+}
+
+:root[data-theme=peax] {
+  --snip-accent: #014122;
+}
+
+:root[data-theme=salmon] {
+  --snip-accent: #CA3832;
+}
+
+:root[data-theme=ubuntu] {
+  --snip-accent: #E95420;
+}
+
+:root[data-theme=ultramarine] {
+  --snip-accent: #3C4EFE;
+}
+
+body {
+  color: #000 !important;
+  background-color: #ffffff !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--snip-accent) !important;
+}
+
+a {
+  color: var(--snip-accent) !important;
+}
+
+header {
+  display: none;
+}
+
+section {
+  width: 100% !important;
+  max-width: 90% !important;
+  margin: 0 auto !important;
+  float: none !important;
+}
+
+.wrapper {
+  max-width: 1200px !important;
+  margin: 0 auto;
+}
+
+.tool-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.tool-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 200px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.activity-bar {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.active {
+  color: var(--snip-accent);
+}
+
+.inactive {
+  color: #d1d5da;
+}
+
+/* --- Desktop View (Standard Table) --- */
+.responsive-matrix {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* --- Mobile View (The "Long List" Transformation) --- */
+@media screen and (max-width: 768px) {
+  .responsive-matrix {
+    border: 0;
+  }
+  /* Hide the actual header row */
+  .responsive-matrix thead {
+    display: none;
+  }
+  /* Make every row look like a "Card" */
+  .responsive-matrix tr {
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  /* Make every cell a full-width line */
+  .responsive-matrix td {
+    display: block;
+    text-align: right;
+    /* Values on the right */
+    border-bottom: 1px solid #eee;
+    padding: 8px 0;
+    position: relative;
+  }
+  /* Inject the Header name on the left of the cell */
+  .responsive-matrix td::before {
+    content: attr(data-label);
+    /* Pulls from the data-label HTML attribute */
+    float: left;
+    font-weight: bold;
+    color: #666;
+  }
+  .responsive-matrix td:last-child {
+    border-bottom: 0;
   }
 }
 
