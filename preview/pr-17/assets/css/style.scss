@@ -1,0 +1,161 @@
+--- ---
+/* Source CSS for CV-snippets */
+@import "{{ site.theme }}";
+
+// --- Theme mnemonics: name -> accent hex.
+// Add a new line here to create a new named theme.
+// URL param ?use_theme=NAME selects a named theme.
+// URL param ?use_theme=%23HEX (the %23 is a URL-encoded "#") applies a raw color.
+$snip-themes: (
+  // NVidia green
+  "black": #000000,
+  "bluey": #377BB5,
+  "deepurple": #9C5BDE,
+  // nVIDIA green:
+  "green": #75b800,
+  // Canonical Orange:
+  "mango": #EE8732,
+  "optum": #FF612B,
+  "pagaya": #2588FA,
+  // peax dorcom:
+  "peax": #014122,
+  "salmon": #CA3832,
+  "ubuntu": #E95420,
+  "ultramarine": #3C4EFE
+);
+
+// Default accent when no ?use_theme parameter is present
+:root {
+  --snip-accent: #{map-get($snip-themes, "green")};
+}
+
+// One :root[data-theme="NAME"] block per map entry, generated at build time
+@each $name, $color in $snip-themes {
+  :root[data-theme="#{$name}"] {
+    --snip-accent: #{$color};
+  }
+}
+
+// --- 1. COLOR OVERRIDES ---
+$body-text-color: #000;
+
+body {
+  color: $body-text-color !important;
+  background-color: #ffffff !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--snip-accent) !important;
+}
+
+a {
+  color: var(--snip-accent) !important;
+}
+
+// Your custom palette
+
+
+// 2. Kill the sidebar width
+header {
+  display: none; // Completely removes the left box from the layout
+}
+
+// 2. Expand the content to fill the screen
+section {
+  width: 100% !important;
+  max-width: 90% !important; // Gives some breathing room at the edges
+  margin: 0 auto !important; // Centers the content
+  float: none !important; // Removes the 'float: right' usually found in Minimal
+}
+
+// 3. Let the wrapper use more space
+.wrapper {
+  max-width: 1200px !important; // Increase this if you want an ultra-wide table
+  margin: 0 auto;
+}
+
+.tool-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.tool-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 200px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.activity-bar {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.active {
+  color: var(--snip-accent);
+}
+
+.inactive {
+  color: #d1d5da;
+}
+
+// Faded gray
+
+
+/* --- Desktop View (Standard Table) --- */
+.responsive-matrix {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+/* --- Mobile View (The "Long List" Transformation) --- */
+@media screen and (max-width: 768px) {
+  .responsive-matrix {
+    border: 0;
+  }
+
+  /* Hide the actual header row */
+  .responsive-matrix thead {
+    display: none;
+  }
+
+  /* Make every row look like a "Card" */
+  .responsive-matrix tr {
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  /* Make every cell a full-width line */
+  .responsive-matrix td {
+    display: block;
+    text-align: right;
+    /* Values on the right */
+    border-bottom: 1px solid #eee;
+    padding: 8px 0;
+    position: relative;
+  }
+
+  /* Inject the Header name on the left of the cell */
+  .responsive-matrix td::before {
+    content: attr(data-label);
+    /* Pulls from the data-label HTML attribute */
+    float: left;
+    font-weight: bold;
+    color: #666;
+  }
+
+  .responsive-matrix td:last-child {
+    border-bottom: 0;
+  }
+}
