@@ -1523,7 +1523,7 @@ title: The tools I have used/been using
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:check" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments">QAMA Lib</td>
+      <td data-label="Comments">no OS C library</td>
     </tr>
     <tr>
       <td data-label="Area">Programming</td>
@@ -1628,7 +1628,7 @@ title: The tools I have used/been using
       <td data-label="Int"><iconify-icon icon="mdi:minus" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments">legacy maintenance in 2013</td>
+      <td data-label="Comments">legacy maintenance 2012-2014</td>
     </tr>
     <tr>
       <td data-label="Area">Programming</td>
@@ -1688,7 +1688,7 @@ title: The tools I have used/been using
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments">Fortscale monitoring</td>
+      <td data-label="Comments">lightweight monitoring</td>
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
@@ -1703,7 +1703,7 @@ title: The tools I have used/been using
       <td data-label="Int"><iconify-icon icon="mdi:minus" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments">early hands-on (consultancy era)</td>
+      <td data-label="Comments">early hands-on (2017)</td>
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
@@ -1718,7 +1718,7 @@ title: The tools I have used/been using
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments">Technion lab &mdash; shared FS across mixed Linux/Solaris/Windows estate</td>
+      <td data-label="Comments">shared FS</td>
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
@@ -1733,7 +1733,7 @@ title: The tools I have used/been using
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments">Technion lab &mdash; distributed batch on SLES</td>
+      <td data-label="Comments">distributed opportunistic batch processing</td>
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
@@ -1748,7 +1748,7 @@ title: The tools I have used/been using
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments">Technion lab &mdash; MPI workloads over InfiniBand for researchers</td>
+      <td data-label="Comments">workloads on TCP/IP or IB for researchers</td>
     </tr>
     <tr>
       <td data-label="Area">Development</td>
@@ -1763,7 +1763,7 @@ title: The tools I have used/been using
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:check" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments">client CI/CD (consultancy era)</td>
+      <td data-label="Comments">client CI/CD since 2018</td>
     </tr>
     <tr>
       <td data-label="Area">Development</td>
@@ -1778,7 +1778,7 @@ title: The tools I have used/been using
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments">Red Hat 2nd tenure &mdash; Python and Ansible dev assistant</td>
+      <td data-label="Comments">dev assistance/documentation (ansible, python)</td>
     </tr>
     <tr>
       <td data-label="Area">Development</td>
@@ -1793,7 +1793,7 @@ title: The tools I have used/been using
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments">Red Hat 2nd tenure &mdash; Python and Ansible dev assistant</td>
+      <td data-label="Comments">dev assistance/documentation (ansible, python)</td>
     </tr>
     <tr>
       <td data-label="Area">Programming</td>
@@ -1838,7 +1838,7 @@ title: The tools I have used/been using
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments">NRGene &mdash; job authoring incl. debug/test; triage of failing jobs</td>
+      <td data-label="Comments">job authoring incl. debug/test; triage of failing jobs</td>
     </tr>
     <tr>
       <td data-label="Area">Programming</td>
@@ -1853,7 +1853,7 @@ title: The tools I have used/been using
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments">Fortscale product stack (Cloudera)</td>
+      <td data-label="Comments">cloudera</td>
     </tr>
     <tr>
       <td data-label="Area">Programming</td>
@@ -1868,7 +1868,7 @@ title: The tools I have used/been using
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments">Fortscale product stack</td>
+      <td data-label="Comments">stream processing</td>
     </tr>
     <tr>
       <td data-label="Area">Programming</td>
