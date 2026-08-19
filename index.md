@@ -368,7 +368,7 @@ title: The tools I have used/been using
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:check" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments">at RedHat RHEV verification team</td>
+      <td data-label="Comments">is: kvm/qemu/libvirt</td>
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
@@ -383,7 +383,7 @@ title: The tools I have used/been using
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:check" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments"></td>
+      <td data-label="Comments">is: kvm/qemu/libvirt</td>
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
@@ -398,7 +398,7 @@ title: The tools I have used/been using
       <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
       <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
-      <td data-label="Comments"></td>
+      <td data-label="Comments">also: via vCenter</td>
     </tr>
     <tr>
       <td data-label="Area">Infra</td>
@@ -1869,6 +1869,171 @@ title: The tools I have used/been using
       <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
       <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
       <td data-label="Comments">Fortscale product stack</td>
+    </tr>
+    <tr>
+      <td data-label="Area">Programming</td>
+      <td data-label="Category">Observability</td>
+      <td data-label="Tool"><iconify-icon icon="mdi:bug-outline"></iconify-icon> gdb</td>
+      <td data-label="Versions"></td>
+      <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
+      <td data-label="Use"><iconify-icon icon="mdi:check" title="Use"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:minus" title="Arch"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:minus" title="Code"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments">startup config, remote connect, analysis via external front-end</td>
+    </tr>
+    <tr>
+      <td data-label="Area">Programming</td>
+      <td data-label="Category">Observability</td>
+      <td data-label="Tool"><iconify-icon icon="mdi:magnify-scan"></iconify-icon> strace</td>
+      <td data-label="Versions"></td>
+      <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
+      <td data-label="Use"><iconify-icon icon="mdi:check" title="Use"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:minus" title="Arch"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:minus" title="Code"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:minus" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments">syscall-level fault isolation</td>
+    </tr>
+    <tr>
+      <td data-label="Area">Programming</td>
+      <td data-label="Category">Observability</td>
+      <td data-label="Tool"><iconify-icon icon="mdi:text-box-search-outline"></iconify-icon> dmesg</td>
+      <td data-label="Versions"></td>
+      <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
+      <td data-label="Use"><iconify-icon icon="mdi:check" title="Use"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:minus" title="Arch"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:minus" title="Code"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:minus" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments">kernel ring buffer during fault analysis</td>
+    </tr>
+    <tr>
+      <td data-label="Area">Programming</td>
+      <td data-label="Category">Observability</td>
+      <td data-label="Tool"><iconify-icon icon="mdi:link-variant"></iconify-icon> ldd</td>
+      <td data-label="Versions"></td>
+      <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
+      <td data-label="Use"><iconify-icon icon="mdi:check" title="Use"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:minus" title="Arch"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:minus" title="Code"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:minus" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments">shared-library resolution during build/packaging issues</td>
+    </tr>
+    <tr>
+      <td data-label="Area">Programming</td>
+      <td data-label="Category">Observability</td>
+      <td data-label="Tool"><iconify-icon icon="mdi:lan-connect"></iconify-icon> tcpdump</td>
+      <td data-label="Versions"></td>
+      <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
+      <td data-label="Use"><iconify-icon icon="mdi:check" title="Use"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:minus" title="Arch"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:minus" title="Code"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments">capture plus analysis via external tool/GUI</td>
+    </tr>
+    <tr>
+      <td data-label="Area">Programming</td>
+      <td data-label="Category">Observability</td>
+      <td data-label="Tool"><iconify-icon icon="mdi:memory"></iconify-icon> kernel dumps</td>
+      <td data-label="Versions"></td>
+      <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
+      <td data-label="Use"><iconify-icon icon="mdi:check" title="Use"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:minus" title="Arch"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:minus" title="Code"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:minus" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments">post-mortem analysis</td>
+    </tr>
+    <tr>
+      <td data-label="Area">Infra</td>
+      <td data-label="Category">Observability</td>
+      <td data-label="Tool"><iconify-icon icon="mdi:notebook-outline"></iconify-icon> journalctl</td>
+      <td data-label="Versions"></td>
+      <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
+      <td data-label="Use"><iconify-icon icon="mdi:check" title="Use"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:minus" title="Arch"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:minus" title="Code"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:minus" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments">systemd journal during production/customer-site fault analysis</td>
+    </tr>
+    <tr>
+      <td data-label="Area">Infra</td>
+      <td data-label="Category">Hardware</td>
+      <td data-label="Tool"><iconify-icon icon="mdi:console-network-outline"></iconify-icon> BMC</td>
+      <td data-label="Versions"></td>
+      <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
+      <td data-label="Use"><iconify-icon icon="mdi:check" title="Use"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:minus" title="Arch"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:minus" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:check" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments">IPMI over iLO/iDRAC; multi-arch lab bring-up; RHEV node post-provisioning; replaced vendor blade stack with open-source equivalent</td>
+    </tr>
+    <tr>
+      <td data-label="Area">Infra</td>
+      <td data-label="Category">Hardware</td>
+      <td data-label="Tool"><iconify-icon icon="mdi:chip"></iconify-icon> EFI / UEFI</td>
+      <td data-label="Versions"></td>
+      <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
+      <td data-label="Use"><iconify-icon icon="mdi:check" title="Use"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:minus" title="Arch"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:minus" title="Code"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:minus" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments">ppc64 / x86 lab estates</td>
+    </tr>
+    <tr>
+      <td data-label="Area">Infra</td>
+      <td data-label="Category">Hardware</td>
+      <td data-label="Tool"><iconify-icon icon="mdi:transit-connection-variant"></iconify-icon> InfiniBand</td>
+      <td data-label="Versions"></td>
+      <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
+      <td data-label="Use"><iconify-icon icon="mdi:check" title="Use"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:minus" title="Arch"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:minus" title="Code"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:check" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:minus" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments">8-port switches + Dolphin; MPI workloads for lab researchers</td>
+    </tr>
+    <tr>
+      <td data-label="Area">Infra</td>
+      <td data-label="Category">Containers</td>
+      <td data-label="Tool"><iconify-icon icon="logos:helm"></iconify-icon> Helm</td>
+      <td data-label="Versions"></td>
+      <td data-label="Try"><iconify-icon icon="mdi:check" title="Try"></iconify-icon></td>
+      <td data-label="Use"><iconify-icon icon="mdi:check" title="Use"></iconify-icon></td>
+      <td data-label="Arch"><iconify-icon icon="mdi:minus" title="Arch"></iconify-icon></td>
+      <td data-label="Code"><iconify-icon icon="mdi:check" title="Code"></iconify-icon></td>
+      <td data-label="Tune"><iconify-icon icon="mdi:minus" title="Tune"></iconify-icon></td>
+      <td data-label="Int"><iconify-icon icon="mdi:check" title="Int"></iconify-icon></td>
+      <td data-label="Ext"><iconify-icon icon="mdi:check" title="Ext"></iconify-icon></td>
+      <td data-label="Migrate"><iconify-icon icon="mdi:minus" title="Migrate"></iconify-icon></td>
+      <td data-label="Comments">templating, umbrella multi-service charts; client Kubernetes estates</td>
     </tr>
   </tbody>
 </table>
